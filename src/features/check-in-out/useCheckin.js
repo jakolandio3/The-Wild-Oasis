@@ -22,7 +22,7 @@ export function useCheckin() {
     },
     onError: (err) => {
       toast.dismiss();
-      toast.error("There was an error While Checking In");
+      toast.error(`There was an error While Checking In ${err.message}`);
     },
   });
   return { checkin, isCheckingIn };

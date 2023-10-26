@@ -17,7 +17,7 @@ export function useCheckout() {
     },
     onError: (err) => {
       toast.dismiss();
-      toast.error("There was an error While Checking out");
+      toast.error(`There was an error While Checking out ${err.message}`);
     },
   });
   return { checkout, isCheckingOut };
