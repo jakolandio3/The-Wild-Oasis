@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
+import Uploader from "../data/Uploader";
+import { useDemoMode } from "../context/DemoModeContext";
 
 const StyledSidebar = styled.aside`
   background-color: var(--color-grey-0);
@@ -14,10 +16,12 @@ const StyledSidebar = styled.aside`
 `;
 
 function SideBar() {
+  const { isDemoMode } = useDemoMode();
   return (
     <StyledSidebar>
       <Logo />
       <MainNav />
+      {isDemoMode && <Uploader />}
     </StyledSidebar>
   );
 }

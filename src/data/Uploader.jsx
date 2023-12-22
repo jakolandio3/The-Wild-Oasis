@@ -3,6 +3,7 @@ import { isFuture, isPast, isToday } from "date-fns";
 import supabase from "../services/supabase";
 import Button from "../ui/Button";
 import { subtractDates } from "../utils/helpers";
+import toast from "react-hot-toast";
 
 import { bookings } from "./data-bookings";
 import { cabins } from "./data-cabins";
@@ -94,8 +95,6 @@ async function createBookings() {
     };
   });
 
-  console.log(finalBookings);
-
   const { error } = await supabase.from("bookings").insert(finalBookings);
   if (error) console.log(error.message);
 }
@@ -105,6 +104,7 @@ function Uploader() {
 
   async function uploadAll() {
     setIsLoading(true);
+    toast.loading("Adding test bookings to database");
     // Bookings need to be deleted FIRST
     await deleteBookings();
     await deleteGuests();
@@ -114,8 +114,9 @@ function Uploader() {
     await createGuests();
     await createCabins();
     await createBookings();
-
     setIsLoading(false);
+    toast.dismiss();
+    toast.success("All Done");
   }
 
   async function uploadBookings() {
@@ -131,6 +132,8 @@ function Uploader() {
         marginTop: "auto",
         backgroundColor: "#e0e7ff",
         padding: "8px",
+        opacity: "0.3",
+        marginBottom: "70px",
         borderRadius: "5px",
         textAlign: "center",
         display: "flex",

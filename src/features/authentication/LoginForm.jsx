@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import { Input } from "../../ui/Input";
@@ -6,11 +6,23 @@ import { Input } from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
 import { useLogin } from "./useLogin";
 import SpinnerMini from "../../ui/SpinnerMini";
+import { useDemoMode } from "../../context/DemoModeContext";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
+  const { isDemoMode } = useDemoMode();
+
+  const [email, setEmail] = useState(isDemoMode ? "demo" : "");
   const [password, setPassword] = useState("");
   const { login, isLoggingIn } = useLogin();
+  useEffect(() => {
+    if (isDemoMode) {
+      setEmail("demo@demo.com");
+      setPassword("testing");
+    } else {
+      setEmail("");
+      setPassword("");
+    }
+  }, [isDemoMode]);
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password) return;

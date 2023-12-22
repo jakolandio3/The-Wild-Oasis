@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import SideBar from "./SideBar.jsx";
 import Header from "./Header";
 import styled from "styled-components";
+import DemoModeToggle from "./DemoModeToggle.jsx";
 
 const StyledAppLayout = styled.div`
   display: grid;
@@ -31,6 +32,7 @@ const Container = styled.div`
 function AppLayout() {
   return (
     <StyledAppLayout>
+      <DemoModeToggle />
       <Header />
       <SideBar />
       <Main>
