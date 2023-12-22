@@ -8,7 +8,7 @@ export function useLogout() {
   const queryClient = useQueryClient();
   const { mutate: logout, isLoading } = useMutation({
     mutationFn: logoutApi,
-    onMutate: () => toast.loading(`Jacking-Off..`),
+    onMutate: () => toast.loading(`Signing-Off..`),
     onSuccess: () => {
       toast.dismiss();
       toast.success(`User Logged Out`);

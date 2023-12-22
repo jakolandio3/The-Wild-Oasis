@@ -1,5 +1,7 @@
 import { useDemoMode } from "../context/DemoModeContext";
-import Uploader from "../data/Uploader";
+
+import { useLogout } from "../features/authentication/useLogout";
+
 import Button from "./Button";
 import styled from "styled-components";
 
@@ -26,11 +28,16 @@ const StyledDemoModeText = styled.p`
 `;
 
 function DemoModeToggle() {
+  const { logout } = useLogout();
   const { isDemoMode, toggleDemoMode } = useDemoMode();
+  function logOut() {
+    toggleDemoMode();
+    if (isDemoMode) logout();
+  }
   return (
     <>
       <StlyedDevButton>
-        <Button onClick={toggleDemoMode} size="small">
+        <Button onClick={logOut} size="small">
           Click to toggle Demo Mode
         </Button>
       </StlyedDevButton>

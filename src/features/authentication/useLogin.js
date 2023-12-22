@@ -8,7 +8,7 @@ export function useLogin() {
   const navigate = useNavigate();
   const { mutate: login, isLoading: isLoggingIn } = useMutation({
     mutationFn: ({ email, password }) => loginAPI({ email, password }),
-    onMutate: () => toast.loading(`Jacking-On..`),
+    onMutate: () => toast.loading(`Logging-On..`),
     onSuccess: (user) => {
       toast.dismiss();
       toast.success(`Successfully Logged In!`);

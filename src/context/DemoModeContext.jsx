@@ -1,13 +1,15 @@
 import { createContext, useContext, useState } from "react";
 import toast from "react-hot-toast";
+
 const DemoModeContext = createContext();
 
 function DemoModeProvider({ children }) {
-  const [isDemoMode, setIsDemoMode] = useState(false);
+  const [isDemoMode, setIsDemoMode] = useState(true);
   function toggleDemoMode() {
     setIsDemoMode((isDemoMode) => !isDemoMode);
-    if (isDemoMode) toast.success("Exiting Demo Mode");
-    else toast.success("Changed To Demo Mode");
+    if (isDemoMode) {
+      toast.success("Exiting Demo Mode");
+    } else toast.success("Changed To Demo Mode");
   }
   return (
     <DemoModeContext.Provider value={{ isDemoMode, toggleDemoMode }}>
