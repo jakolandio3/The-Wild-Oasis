@@ -8,6 +8,10 @@ const StyledLogo = styled.div`
 const Img = styled.img`
   height: 9.6rem;
   width: auto;
+  @media screen and (max-width: 600px) {
+    padding: 15px;
+    overflow: hidden;
+  }
 `;
 
 function Logo() {

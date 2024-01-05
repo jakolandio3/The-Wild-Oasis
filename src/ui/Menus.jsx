@@ -8,6 +8,9 @@ const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+  }
 `;
 
 const StyledToggle = styled.button`

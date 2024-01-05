@@ -25,6 +25,9 @@ const StyledDemoModeText = styled.p`
   position: absolute;
   top: 20px;
   left: 250px;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 function DemoModeToggle() {
