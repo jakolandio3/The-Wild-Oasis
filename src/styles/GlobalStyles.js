@@ -49,6 +49,7 @@ const GlobalStyles = createGlobalStyle`
     --color-red-800: #991b1b;
   
     --backdrop-color: rgba(255, 255, 255, 0.1);
+    --backdrop-color: rgba(255, 255, 255, 0.1);
   
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.06);
@@ -57,6 +58,17 @@ const GlobalStyles = createGlobalStyle`
   --image-opacity: 100%;
   }
 &.dark-mode {
+  /* --color-grey-0: #0f2322;//side and top  background
+--color-grey-50: #2e3931; //interior page
+--color-grey-100: #3f2411; // outline
+--color-grey-200: #d69b73; //unknown
+--color-grey-300: #d69b73; //graph lines
+--color-grey-400: #d69b73; //Side Logos
+--color-grey-500: #d69b73; //data text
+--color-grey-600: #7f4112; //nav text and name text
+--color-grey-700: #7f4112;// secondary text
+--color-grey-800: #d69b73; // selected/hover nav text colour
+--color-grey-900: #d69b73; //unknown */
   --color-grey-0: #18212f;
 --color-grey-50: #111827;
 --color-grey-100: #1f2937;

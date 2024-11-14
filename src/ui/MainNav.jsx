@@ -12,6 +12,7 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  overflow: hidden;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -49,7 +50,9 @@ const StyledNavLink = styled(NavLink)`
     }
   }
   & span {
-    display: none;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   &:hover svg,
