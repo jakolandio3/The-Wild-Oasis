@@ -16,7 +16,8 @@ const LoginLayout = styled.main`
   background-color: var(--color-grey-50);
 
   @media screen and (max-width: 600px) {
-    grid-template-columns: 40rem;
+    grid-template-columns: 80%;
+    overflow: hidden;
   }
 `;
 
