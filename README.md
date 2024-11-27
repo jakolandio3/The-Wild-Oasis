@@ -12,6 +12,7 @@ The application manages bookings, cabins, and guests through a React-based inter
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
