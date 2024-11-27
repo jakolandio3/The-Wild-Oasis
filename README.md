@@ -63,6 +63,21 @@ To preview the production build, run:
 npm run preview
 ```
 
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Supabase**: An open-source Firebase alternative for backend services.
+- **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
+- **Styled Components**: A library for styling React components using tagged template literals.
+- **React Router**: A library for routing in React applications.
+- **React Hook Form**: A library for managing form state in React.
+- **React Query**: A library for fetching, caching, and updating asynchronous data in React.
+- **Date-fns**: A library for manipulating JavaScript dates.
+- **ESLint**: A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+- **Prettier**: An opinionated code formatter.
+- **Recharts**: A composable charting library built on React components.
+- **React Hot Toast**: A library for creating toast notifications in React.
+
 ## Features
 
 - **Authentication:** User signup, login, logout, and profile update using Supabase.
